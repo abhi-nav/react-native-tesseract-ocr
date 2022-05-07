@@ -34,13 +34,16 @@ public class TesseractOcrModule extends ReactContextBaseJavaModule {
     private static final String KEY_TOKEN_LEVEL = "level";
     private static final String TESS_FILES_DIRECTORY = "tessdata";
     private static final String TESS_FILES_EXTENSION = ".traineddata";
-    private static String DATA_PATH = Environment.getExternalStorageDirectory().toString();
+    // private static String DATA_PATH = Environment.getExternalFilesDir().toString();
+    private static String DATA_PATH;
     private static String TESS_FILES_PATH;
     private TessBaseAPI tesseract;
 
     public TesseractOcrModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
+        DATA_PATH = reactContext.getExternalFilesDir(null).toString();
+
         if (!this.DATA_PATH.contains(reactContext.getPackageName())) {
             this.DATA_PATH += File.separator + reactContext.getPackageName();
         }
