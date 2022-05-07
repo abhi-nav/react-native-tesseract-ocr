@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { NativeModules, DeviceEventEmitter } from "react-native";
 
+export const LANG_PASSPORT_FAST = "mrzfast";
+export const LANG_PASSPORT = "mrz";
 export const LANG_AFRIKAANS = "afr";
 export const LANG_AMHARIC = "amh";
 export const LANG_ARABIC = "ara";
@@ -49,12 +51,15 @@ export const LEVEL_SYMBOL = "symbol";
 export const LEVEL_WORD = "word";
 
 export function useEventListener(eventType, listener) {
-  useEffect(() => {
-    const subscription = DeviceEventEmitter.addListener(eventType, listener);
-    return () => {
-      subscription.remove();
-    };
-  });
+	useEffect(() => {
+		const subscription = DeviceEventEmitter.addListener(
+			eventType,
+			listener
+		);
+		return () => {
+			subscription.remove();
+		};
+	});
 }
 
 const { TesseractOcr } = NativeModules;
