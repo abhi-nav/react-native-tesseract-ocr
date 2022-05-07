@@ -1,6 +1,10 @@
 declare module "react-native-tesseract-ocr" {
 	export const LANG_PASSPORT_FAST = "mrzfast";
 	export const LANG_PASSPORT = "mrz";
+	export const LANG_OCRB = "ocrb";
+	export const LANG_OCRB_LITE = "ocrblite";
+	export const LANG_PASSPORT = "mrz";
+
 	export const LANG_AFRIKAANS = "afr";
 	export const LANG_AMHARIC = "amh";
 	export const LANG_ARABIC = "ara";
