@@ -3,7 +3,6 @@ declare module "react-native-tesseract-ocr" {
 	export const LANG_PASSPORT = "mrz";
 	export const LANG_OCRB = "ocrb";
 	export const LANG_OCRB_LITE = "ocrblite";
-	export const LANG_PASSPORT = "mrz";
 
 	export const LANG_AFRIKAANS = "afr";
 	export const LANG_AMHARIC = "amh";
@@ -53,6 +52,8 @@ declare module "react-native-tesseract-ocr" {
 	export const LEVEL_WORD = "word";
 
 	export type Lang =
+		| typeof LANG_OCRB
+		| typeof LANG_OCRB_LITE
 		| typeof LANG_PASSPORT
 		| typeof LANG_PASSPORT_FAST
 		| typeof LANG_AFRIKAANS
