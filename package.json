@@ -8,6 +8,7 @@
 		"android",
 		"index.js",
 		"ios",
+		"index.d.ts",
 		"react-native-tesseract-ocr.podspec"
 	],
 	"scripts": {
